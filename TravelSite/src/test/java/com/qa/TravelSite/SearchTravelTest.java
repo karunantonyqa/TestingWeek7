@@ -31,6 +31,7 @@ WebDriver driver = null;
 	
 	@Test
 	public void testSearch() {
+		driver.manage().window().maximize();
 		driver.get("https://www.phptravels.net/");
 		SearchTravel page = PageFactory.initElements(driver, SearchTravel.class);
 		
@@ -43,12 +44,10 @@ WebDriver driver = null;
 		
 		Point londonPoint = page.londonOption.getLocation();
 		
-		action.moveToElement(page.londonOption).click(); 
 //		action.moveToElement(page.londonOption).click().click();
 		
 		
 		action.moveToElement(page.startDateChoice).click();
-		System.out.println(page.startDate.getAttribute("value"));
 		
 		
 		
