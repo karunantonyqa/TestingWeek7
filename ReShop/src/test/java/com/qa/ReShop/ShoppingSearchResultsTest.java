@@ -37,9 +37,7 @@ public class ShoppingSearchResultsTest {
 		File scrFile = new File(directory); 
 		
 		scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		String source = scrFile.getAbsolutePath();
-		
+				
 		output = new FileOutputStream(directory);
 		Files.copy(scrFile, output);
 	}

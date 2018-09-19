@@ -37,4 +37,8 @@ public class Elements {
 	
 	@FindBy(xpath = "/html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[2]")
 	WebElement checkPass;
+	
+	
+	
+	
 }

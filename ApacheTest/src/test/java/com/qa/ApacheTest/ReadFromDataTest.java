@@ -4,10 +4,16 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -45,7 +51,7 @@ public class ReadFromDataTest {
 		Elements elements = PageFactory.initElements(driver, Elements.class);
 		
 		driver.get(Constants.websiteURL);
-		test.log(LogStatus.INFO, "Register run");
+		test.log(LogStatus.INFO, "Site launched");
 		
 		FileInputStream file = new FileInputStream(constants.fileTestDataLoc);
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -54,6 +60,9 @@ public class ReadFromDataTest {
 		
 		for(int i = 1; i<sheet.getPhysicalNumberOfRows();i++) {
 			elements.adduser.click();
+			
+			test.log(LogStatus.INFO, "Add user page success");
+
 
 			Cell username = sheet.getRow(i).getCell(0);
 			Cell password = sheet.getRow(i).getCell(1);
@@ -66,33 +75,33 @@ public class ReadFromDataTest {
 			
 			elements.username.sendKeys(user);
 			elements.password.sendKeys(pass);
-			elements.registerBtn.click();			
+			elements.registerBtn.click();
+			test.log(LogStatus.INFO, "User name and password registered");
+
 			elements.loginPageBtn.click();
+			test.log(LogStatus.INFO, "Login page access success");
+
 			elements.loginUsername.sendKeys(user);
 			elements.loginPassword.sendKeys(pass);
 			elements.loginBtn.click();
-			
-			String kSuccess = elements.success.getText();
-			
+			test.log(LogStatus.INFO, "Login button pressed");
+
+			constants.takeShot(driver);			
 			
 			if(elements.success.getText().equals(successString)) {
 				test.log(LogStatus.PASS, "Login for " + user + " SUCCESSFUL");
+				ExcelUtils.setCellData("Success", i+2, 2);
 			} else{
 				test.log(LogStatus.FAIL, "Login for " + user + " FAILED");
+//				ExcelUtils.setCellData("Fail", i, 2);
 
 			}
 			
 			assertEquals("**Successful Login**", elements.success.getText());
 			
-			
 		}
 		workbook.close();
-
-
-		
 	}
-	
-	
 	
 	@After
 	public void teardown() throws InterruptedException {
