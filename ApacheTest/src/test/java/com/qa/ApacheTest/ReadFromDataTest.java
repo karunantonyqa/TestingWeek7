@@ -90,7 +90,7 @@ public class ReadFromDataTest {
 			
 			if(elements.success.getText().equals(successString)) {
 				test.log(LogStatus.PASS, "Login for " + user + " SUCCESSFUL");
-				ExcelUtils.setCellData("Success", i+2, 2);
+				ExcelUtils.setCellData("Success", i, 2);
 			} else{
 				test.log(LogStatus.FAIL, "Login for " + user + " FAILED");
 //				ExcelUtils.setCellData("Fail", i, 2);
