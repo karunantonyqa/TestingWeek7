@@ -1,4 +1,4 @@
-package com.qa.Cucumber;
+package com.qa.HotelSwagger;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

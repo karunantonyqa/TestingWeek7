@@ -31,6 +31,7 @@ public class SimpleTest {
 	@BeforeClass
 	public static void intial() {
 		report = new ExtentReports("C:\\Users\\Admin\\eclipse-workspace\\RestAssured\\RestTest.html", false);
+		
 	}
 	
 	@Before
