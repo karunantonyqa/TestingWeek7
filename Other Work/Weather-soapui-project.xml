@@ -660,155 +660,20 @@
       </ndf:NDFDgenByDay>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d65cf93a-a486-4b6a-9daa-70a443f17f76" name="SOAP Response"/><con:assertion type="Simple Contains" id="7a836108-9514-4400-92d9-6d7355e4e5c8" name="Contains"><con:configuration><token>&lt;data>
-    &lt;location></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="4e6f8c2d-d631-48df-939d-5dc745f67be6" name="XPath Match"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
+    &lt;location></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="4e6f8c2d-d631-48df-939d-5dc745f67be6" name="XPath Match feedback"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/';
 declare namespace ns1='https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl';
 
-//ns1:NDFDgenByDayResponse</path><content><![CDATA[<ns1:NDFDgenByDayResponse xmlns:ns1="https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
-  <dwmlByDayOut xsi:type="xsd:string"><![CDATA[<?xml version="1.0"?>
-<dwml version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://graphical.weather.gov/xml/DWMLgen/schema/DWML.xsd">
-  <head>
-    <product srsName="WGS 1984" concise-name="dwmlByDay" operational-mode="official">
-      <title>NOAA's National Weather Service Forecast by 12 Hour Period</title>
-      <field>meteorological</field>
-      <category>forecast</category>
-      <creation-date refresh-frequency="PT1H">2018-09-28T12:31:54Z</creation-date>
-    </product>
-    <source>
-      <more-information>https://graphical.weather.gov/xml/</more-information>
-      <production-center>Meteorological Development Laboratory<sub-center>Product Generation Branch</sub-center></production-center>
-      <disclaimer>http://www.nws.noaa.gov/disclaimer.html</disclaimer>
-      <credit>https://www.weather.gov/</credit>
-      <credit-logo>https://www.weather.gov/logorequest</credit-logo>
-      <feedback>https://www.weather.gov/contact</feedback>
-    </source>
-  </head>
-  <data>
-    <location>
-      <location-key>point1</location-key>
-      <point latitude="39.00" longitude="-77.00"/>
-    </location>
-    <moreWeatherInformation applicable-location="point1">https://forecast-v3.weather.gov/point/39.00,-77.00</moreWeatherInformation>
-    <time-layout time-coordinate="local" summarization="12hourly">
-      <layout-key>k-p24h-n5-1</layout-key>
-      <start-valid-time period-name="Saturday">2018-09-29T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-29T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Sunday">2018-09-30T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-30T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Monday">2018-10-01T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-01T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Tuesday">2018-10-02T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-02T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Wednesday">2018-10-03T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-03T18:00:00-04:00</end-valid-time>
-    </time-layout>
-    <time-layout time-coordinate="local" summarization="12hourly">
-      <layout-key>k-p24h-n5-2</layout-key>
-      <start-valid-time period-name="Tonight">2018-09-28T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-29T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Tomorrow Night">2018-09-29T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-30T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Sunday Night">2018-09-30T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-01T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Monday Night">2018-10-01T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-02T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Tuesday Night">2018-10-02T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-03T06:00:00-04:00</end-valid-time>
-    </time-layout>
-    <time-layout time-coordinate="local" summarization="12hourly">
-      <layout-key>k-p12h-n10-3</layout-key>
-      <start-valid-time period-name="Tomorrow">2018-09-28T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-29T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Tomorrow Night">2018-09-29T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-29T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Saturday Night">2018-09-29T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-30T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Sunday">2018-09-30T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-09-30T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Sunday Night">2018-09-30T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-01T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Monday">2018-10-01T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-01T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Monday Night">2018-10-01T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-02T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Tuesday">2018-10-02T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-02T18:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Tuesday Night">2018-10-02T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-03T06:00:00-04:00</end-valid-time>
-      <start-valid-time period-name="Wednesday">2018-10-03T06:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-03T18:00:00-04:00</end-valid-time>
-    </time-layout>
-    <time-layout time-coordinate="local" summarization="12hourly">
-      <layout-key>k-p5d-n1-4</layout-key>
-      <start-valid-time>2018-09-28T18:00:00-04:00</start-valid-time>
-      <end-valid-time>2018-10-03T18:00:00-04:00</end-valid-time>
-    </time-layout>
-    <parameters applicable-location="point1">
-      <temperature type="maximum" units="Fahrenheit" time-layout="k-p24h-n5-1">
-        <name>Daily Maximum Temperature</name>
-        <value>73</value>
-        <value>73</value>
-        <value>78</value>
-        <value>79</value>
-        <value>80</value>
-      </temperature>
-      <temperature type="minimum" units="Fahrenheit" time-layout="k-p24h-n5-2">
-        <name>Daily Minimum Temperature</name>
-        <value>58</value>
-        <value>57</value>
-        <value>60</value>
-        <value>63</value>
-        <value>65</value>
-      </temperature>
-      <probability-of-precipitation type="12 hour" units="percent" time-layout="k-p12h-n10-3">
-        <name>12 Hourly Probability of Precipitation</name>
-        <value>7</value>
-        <value>6</value>
-        <value>5</value>
-        <value>2</value>
-        <value>2</value>
-        <value>2</value>
-        <value>2</value>
-        <value>14</value>
-        <value>26</value>
-        <value>18</value>
-      </probability-of-precipitation>
-      <weather time-layout="k-p12h-n10-3">
-        <name>Weather Type, Coverage, and Intensity</name>
-        <weather-conditions weather-summary="Partly Cloudy"/>
-        <weather-conditions weather-summary="Partly Sunny"/>
-        <weather-conditions weather-summary="Partly Cloudy"/>
-        <weather-conditions weather-summary="Partly Sunny"/>
-        <weather-conditions weather-summary="Mostly Clear"/>
-        <weather-conditions weather-summary="Mostly Sunny"/>
-        <weather-conditions weather-summary="Mostly Clear"/>
-        <weather-conditions weather-summary="Partly Sunny"/>
-        <weather-conditions weather-summary="Chance Rain Showers">
-          <value coverage="chance" intensity="light" weather-type="rain showers" qualifier="none"/>
-        </weather-conditions>
-        <weather-conditions weather-summary="Slight Chance Thunderstorms">
-          <value coverage="slight chance" intensity="none" weather-type="thunderstorms" qualifier="none"/>
-          <value coverage="slight chance" intensity="light" additive="and" weather-type="rain showers" qualifier="none"/>
-        </weather-conditions>
-      </weather>
-      <conditions-icon type="forecast-NWS" time-layout="k-p12h-n10-3">
-        <name>Conditions Icons</name>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nsct.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/sct.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nsct.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/sct.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nfew.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/few.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nfew.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/sct.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/nra30.jpg</icon-link>
-        <icon-link>http://www.nws.noaa.gov/weather/images/fcicons/scttsra20.jpg</icon-link>
-      </conditions-icon>
-      <hazards time-layout="k-p5d-n1-4">
-        <name>Watches, Warnings, and Advisories</name>
-        <hazard-conditions xsi:nil="true"/>
-      </hazards>
-    </parameters>
-  </data>
-</dwml>]]]]>><![CDATA[</dwmlByDayOut>
-</ns1:NDFDgenByDayResponse>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl#NDFDgenByDay"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+saxon:parse(//dwmlByDayOut)//feedback</path><content>https://www.weather.gov/contact</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="4e6f8c2d-d631-48df-939d-5dc745f67be6" name="XPath Match location-key"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/';
+declare namespace ns1='https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl';
+
+saxon:parse(//dwmlByDayOut)//location-key</path><content>point1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="4e6f8c2d-d631-48df-939d-5dc745f67be6" name="XPath Match layout-key time-layour]"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/';
+declare namespace ns1='https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl';
+
+saxon:parse(//dwmlByDayOut)//layout-key</path><content>k-p24h-n5-2</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="4e6f8c2d-d631-48df-939d-5dc745f67be6" name="XPath Match multi-tag assert"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/';
+declare namespace ns1='https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl';
+
+saxon:parse(//dwmlByDayOut)//parameters//temperature[1]//value[2]</path><content>73</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://graphical.weather.gov/xml/DWMLgen/wsdl/ndfdXML.wsdl#NDFDgenByDay"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
